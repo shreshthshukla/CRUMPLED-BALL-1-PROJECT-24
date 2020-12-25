@@ -17,7 +17,7 @@ function setup() {
 
 	engine = Engine.create();
 	world = engine.world;
-
+	Engine.run(engine);
 	//Create the Bodies Here.
 
 	paper1 = new Paper(160,390);
@@ -27,7 +27,7 @@ function setup() {
 	box3 = new Box(860,400,240,20);
 
 
-	Engine.run(engine);
+
   
 }
 
@@ -41,14 +41,14 @@ function draw() {
  box1.display();
  box2.display();
  box3.display();
-keypressed();
+// keypressed();
  drawSprites();
 //  text(mouseX+","+mouseY,200,200)
 }
 
-function keypressed(){
+function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:5,y:-8});
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:115,y:-115});
 	}
 
 }
